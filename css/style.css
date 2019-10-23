@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #1b2726;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #1b2726;
+}
+ 
+.logo {
+    color: #d5ddde;
+    letter-spacing: 5px;
+    font-size: 20px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d5ddde;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-family: 'EB Garamond', serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #d5ddde;
+    margin: 5px;
+   transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+            right: 0px;
+            height: 92vh;
+            top: 8vh;
+        background-color: #1b2726;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 1;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+
+}
+
+/* Image/Link Styles */
+
+.tree {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+
+
+
+
+
+
+/* fonts
+font-family: 'Liu Jian Mao Cao', cursive;
+font-family: 'EB Garamond', serif;
+
+colors
+#1b2726
+#3c5148
+#6b8e4e
+#b2c5b3
+#d5ddde 
+
+tree trunk color: #424a4b*/
